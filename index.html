@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Surprise for THEJA! ❤️</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="heart-decoration-top" class="heart-decos"></div>
+
+    <div id="container">
+
+        <div id="timed-gate" class="section">
+            <h1>⏳ The Magic Hour is Coming...</h1>
+            <p>This special message for **THEJA** unlocks at **12:00 AM**.</p>
+            <div id="countdown"></div>
+        </div>
+
+        <div id="quiz-area" class="section hidden">
+
+            <div id="level-1" class="level current-level">
+                <h2>Level 1 of 4: The Beginning</h2>
+                <p>What is the exact date we **got committed**? (DD/MM/YYYY)</p>
+                <input type="date" id="q1-input">
+                <button onclick="checkAnswer(1)">Unlock Next Level</button>
+                <p class="error-message" id="error-1"></p>
+            </div>
+
+            <div id="level-2" class="level hidden">
+                <h2>Level 2 of 4: The First Token</h2>
+                <p>What was the very **first gift** I gave you?</p>
+                <input type="text" id="q2-input" placeholder="Enter the gift name">
+                <button onclick="checkAnswer(2)">Unlock Next Level</button>
+                <p class="error-message" id="error-2"></p>
+            </div>
+
+            <div id="level-3" class="level hidden">
+                <h2>Level 3 of 4: Shared Memory</h2>
+                <p>Click on the photo that represents our **most memorable trip** together:</p>
+                <div class="image-options">
+                    <img src="image-a.jpg" alt="Memory Option A" data-choice="A" onclick="selectImage(3, 'A')">
+                    <img src="image-b.jpg" alt="Memory Option B" data-choice="B" onclick="selectImage(3, 'B')">
+                    <img src="image-c.jpg" alt="Memory Option C" data-choice="C" onclick="selectImage(3, 'C')">
+                    <img src="image-d.jpg" alt="Memory Option D" data-choice="D" onclick="selectImage(3, 'D')">
+                </div>
+                <input type="hidden" id="q3-selected-answer">
+                <button onclick="checkAnswer(3)">Unlock Next Level</button>
+                <p class="error-message" id="error-3"></p>
+            </div>
+
+            <div id="level-4" class="level hidden">
+                <h2>Level 4 of 4: The Secret</h2>
+                <p>What exact short phrase did I **whisper** to you last?</p>
+                <input type="text" id="q4-input" placeholder="Type the whisper here">
+                <button onclick="checkAnswer(4)">Reveal Final Wish!</button>
+                <p class="error-message" id="error-4"></p>
+            </div>
+            
+        </div>
+
+        <div id="final-wish" class="section hidden">
+            <h1>🎉 HAPPY BIRTHDAY, THEJA! 🎉</h1>
+            <p class="wish-message">
+                My dearest **THEJA**, completing all these levels proves that our memories are strong and our love is true.<br><br>
+                You are my past, my present, and my future. Wishing you the most incredible birthday filled with joy and laughter. Every moment with you is a gift.<br><br>
+                **I Love You Always!**
+            </p>
+            <div class="heart-decos"></div>
+        </div>
+
+    </div>
+    
+    <div id="heart-decoration-bottom" class="heart-decos"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
