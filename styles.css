@@ -1,0 +1,156 @@
+/* Basic Reset and Fonts */
+body {
+    font-family: 'Georgia', serif;
+    /* Soft, deep red/pink romantic background */
+    background: linear-gradient(135deg, #fce4ec, #ff80ab); 
+    color: #444;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+#container {
+    background: #ffffff;
+    padding: 30px 40px;
+    border-radius: 25px; /* Softer edges */
+    box-shadow: 0 10px 40px rgba(255, 0, 0, 0.3); /* Romantic shadow */
+    text-align: center;
+    max-width: 550px;
+    width: 90%;
+    position: relative;
+    z-index: 10;
+}
+
+h1 {
+    color: #e91e63; /* Deep pink/magenta */
+    margin-bottom: 20px;
+    font-size: 2.2em;
+    text-shadow: 1px 1px 2px #ffe0e9;
+}
+
+h2 {
+    color: #ff4081; /* Bright pink */
+    border-bottom: 3px dashed #ffcdd2; /* Dashed separator */
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    font-style: italic;
+}
+
+/* Heart Decorations (CSS Shape) */
+.heart-decos::before, .heart-decos::after {
+    content: '';
+    position: absolute;
+    background-color: #ff80ab;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    transform: rotate(-45deg);
+    z-index: 5;
+}
+
+#heart-decoration-top::before { top: 20px; left: 50px; }
+#heart-decoration-top::after { top: 20px; right: 50px; }
+
+/* Common Elements */
+.hidden {
+    display: none !important;
+}
+
+/* Input and Button Styling */
+input[type="date"],
+input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin: 10px 0 20px 0;
+    border: 2px solid #ffb3c1;
+    border-radius: 15px; /* Pill shape for love theme */
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #e91e63;
+    box-shadow: 0 0 5px rgba(233, 30, 99, 0.5);
+    outline: none;
+}
+
+button {
+    background-color: #ff4081; /* Pink button */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px; /* Rounded button */
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+button:hover {
+    background-color: #d81b60;
+    transform: scale(1.05);
+}
+
+.error-message {
+    color: #d81b60; /* Darker error color */
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Image Options (Level 3) */
+.image-options {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.image-options img {
+    width: 22%; 
+    height: auto;
+    border-radius: 10px;
+    border: 4px solid transparent;
+    cursor: pointer;
+    transition: transform 0.2s, border-color 0.2s, opacity 0.2s;
+}
+
+.image-options img:hover {
+    transform: scale(1.1);
+}
+
+.image-options img.selected {
+    border-color: #ff4081; /* Highlight selected image in pink */
+    box-shadow: 0 0 15px rgba(255, 64, 129, 0.7);
+}
+
+/* Final Wish Styling */
+#final-wish {
+    padding: 40px;
+    background: #fffafa;
+    border: 5px double #ff4081; /* Double border for celebration */
+}
+
+#final-wish h1 {
+    font-size: 3.5em;
+    color: #e91e63;
+    animation: pulse 1.5s infinite;
+}
+
+.wish-message {
+    font-size: 1.5em;
+    line-height: 1.6;
+    margin-top: 30px;
+    font-family: 'Dancing Script', cursive; /* Optional: Use a cursive font for extra romance if linked */
+    color: #444;
+}
+
+/* Animation for Final Wish Title */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+    100% { transform: scale(1); }
+}
